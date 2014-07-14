@@ -8,8 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.rechner.MainActivity" >
 
-
-
     <EditText
         android:id="@+id/EditText_Feld1"
         android:layout_width="wrap_content"
@@ -20,13 +18,13 @@
         android:inputType="numberDecimal" />
     
         <EditText
-        android:id="@+id/EditText_Feld2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:inputType="numberDecimal" >
+            android:id="@+id/EditText_Feld2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:inputType="numberDecimal" >
 
         <requestFocus />
     </EditText>
@@ -86,6 +84,7 @@
         android:minWidth="@dimen/Button_Hoehe"
         android:paddingBottom="1dp"
         android:paddingTop="30dp"
+        android:onClick="multiplizieren"
         android:text="@string/Buttonmal"
         android:textSize="@dimen/Button_Textgr" />
 
@@ -97,6 +96,7 @@
         android:layout_below="@+id/subtrahieren"
         android:minHeight="@dimen/Button_Hoehe"
         android:minWidth="@dimen/Button_Hoehe"
+        android:onClick="dividieren"
         android:text="@string/Buttongeteilt"
         android:textSize="@dimen/Button_Textgr" />
     
@@ -121,6 +121,7 @@
         android:layout_below="@+id/EditText_Feld2"
         android:minHeight="@dimen/Button_Hoehe"
         android:minWidth="@dimen/Button_Hoehe"
+        android:onClick="subtrahieren"
         android:text="@string/Buttonminus"
         android:textSize="@dimen/Button_Textgr" />
 
