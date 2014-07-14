@@ -2,6 +2,7 @@ package com.example.rechner;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,31 +37,147 @@ public class MainActivity extends Activity {
 	}
 
 	public void addieren(View Buttonclick) {
+		
+		
+		
+		EditText test = (EditText)findViewById(R.id.EditText_Feld1);
 
-		EditText test = (EditText)Buttonclick.findViewById(R.id.EditText_Feld1);
+		EditText test2 = (EditText) findViewById(R.id.EditText_Feld2);
 
-		EditText test2 = (EditText) Buttonclick.findViewById(R.id.EditText_Feld2);
-
-		TextView Ausgabe = (TextView)Buttonclick.findViewById(R.id.Ergebnisanzeige);
-
-		if ((test == null) | (test2 == null)) {
+		TextView Ausgabe = (TextView)findViewById(R.id.Ergebnisanzeige);
+		
+		
+		if ((test.length() == 0) | (test2.length() == 0)) {
 			String Fehler = "Bitte gib zwei Zahlen ein!";
 			Ausgabe.setText(Fehler);
 		}
 
 		else {
-			String temp = test.getText().toString();
-			int summand1 = Integer.parseInt(temp);
+		
+		Editable zu1=test.getText();
+		Editable zu2=test2.getText();
+		
+		String fi = zu1.toString();
+		Integer la = Integer.parseInt(fi);
+		
+		String fi2 = zu2.toString();
+		Integer la2 = Integer.parseInt(fi2);
+		
+		Integer erg = la+la2;
+		
+		
+		
+		String finale = erg.toString();
+		Ausgabe.setText(finale );
+		}
+	}
+	
+	
+	public void subtrahieren(View Buttonclick) {
+		
+		
+		
+		EditText test = (EditText)findViewById(R.id.EditText_Feld1);
 
-			temp = test2.getText().toString();
-			int summand2 = Integer.parseInt(temp);
+		EditText test2 = (EditText) findViewById(R.id.EditText_Feld2);
 
-			int ergebnis = summand1 + summand2;
-
-			Ausgabe.setText(ergebnis);
-
+		TextView Ausgabe = (TextView)findViewById(R.id.Ergebnisanzeige);
+		
+		
+		if ((test.length() == 0) | (test2.length() == 0)) {
+			String Fehler = "Bitte gib zwei Zahlen ein!";
+			Ausgabe.setText(Fehler);
 		}
 
+		else {
+		
+		Editable zu1=test.getText();
+		Editable zu2=test2.getText();
+		
+		String fi = zu1.toString();
+		Integer la = Integer.parseInt(fi);
+		
+		String fi2 = zu2.toString();
+		Integer la2 = Integer.parseInt(fi2);
+		
+		Integer erg = la-la2;
+		
+		
+		
+		String finale = erg.toString();
+		Ausgabe.setText(finale );
+		}
+	}
+	
+	public void multiplizieren (View Buttonclick) {
+		
+		
+		EditText test = (EditText)findViewById(R.id.EditText_Feld1);
+
+		EditText test2 = (EditText) findViewById(R.id.EditText_Feld2);
+
+		TextView Ausgabe = (TextView)findViewById(R.id.Ergebnisanzeige);
+		
+		
+		if ((test.length() == 0) | (test2.length() == 0)) {
+			String Fehler = "Bitte gib zwei Zahlen ein!";
+			Ausgabe.setText(Fehler);
+		}
+
+		else {
+		
+		Editable zu1=test.getText();
+		Editable zu2=test2.getText();
+		
+		String fi = zu1.toString();
+		Integer la = Integer.parseInt(fi);
+		
+		String fi2 = zu2.toString();
+		Integer la2 = Integer.parseInt(fi2);
+		
+		Integer erg = la*la2;
+		
+		
+		
+		String finale = erg.toString();
+		Ausgabe.setText(finale );
+		}
+	}
+	
+	public void dividieren (View Buttonclick) {
+		
+		
+		
+		EditText test = (EditText)findViewById(R.id.EditText_Feld1);
+
+		EditText test2 = (EditText) findViewById(R.id.EditText_Feld2);
+
+		TextView Ausgabe = (TextView)findViewById(R.id.Ergebnisanzeige);
+		
+		
+		if ((test.length() == 0) | (test2.length() == 0)) {
+			String Fehler = "Bitte gib zwei Zahlen ein!";
+			Ausgabe.setText(Fehler);
+		}
+
+		else {
+		
+		Editable zu1=test.getText();
+		Editable zu2=test2.getText();
+		
+		String fi = zu1.toString();
+		Integer la = Integer.parseInt(fi);
+		
+		String fi2 = zu2.toString();
+		Integer la2 = Integer.parseInt(fi2);
+		
+		Integer erg = la/la2;
+		
+		
+		
+		String finale = erg.toString();
+		Ausgabe.setText(finale );
+		}
 	}
 
 }
